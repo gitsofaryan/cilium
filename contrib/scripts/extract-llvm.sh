@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -eu
+set -x
 
 OUT=${1:-"$PWD"}
 

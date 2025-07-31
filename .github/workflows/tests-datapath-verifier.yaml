@@ -158,6 +158,8 @@ jobs:
 
             # The LVH image ships with LLVM taken from a release Cilium version.
             # Replace it with the one extracted from the cilium-builder image.
+            docker start || true
+            service docker status || true
             /host/contrib/scripts/extract-llvm.sh /tmp/llvm
             mv /tmp/llvm/usr/local/bin/{clang,llc} /bin/
             rm -r /tmp/llvm
